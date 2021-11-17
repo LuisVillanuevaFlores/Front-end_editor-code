@@ -6,7 +6,7 @@ This is a editor python code, you can run your code in python and obtains a outp
 
 
 1. Install dependencies
- 
+
    Install django.
 
    `pip install django`
@@ -22,9 +22,9 @@ This is a editor python code, you can run your code in python and obtains a outp
 
 
 
-4. Open your browser
+4. Open your browser and type url `http://localhost:9000`
 
-   and type url `http://localhost:9000`
 
 5. Observations
-   This project works with django only to manage ports in front-end, to back-end we have other repository that works win flask.
+
+   This project works with django only to manage ports in front-end, to back-end we have other repository that works with flask.
