@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <title>Editor de código Python</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static "web/css/normalize.css" %}">
+  <link rel="stylesheet" href="{% static "web/css/skeleton.css" %}">
+  <link rel="icon" type="image/png" href="{% static "web/images/icon.png" %}">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="margin-top: 5%">
+        <div class="columns">
+             <h4>UNSA Colaboratory</h4>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2%">
+      <div class="six columns" >
+        <h4>Inserta tu código</h4>
+            <textarea style="height: 17em; resize: none;" class="u-full-width" id="code" name="code">
+def fib(n):
+    if n==0:
+        return n
+    if n==1:
+        return n
+    return fib(n-1) + fib(n-2)
+
+for i in range(5):
+    print(fib(i))
+
+            </textarea>
+        <button id="btnExecute" class="button-primary" onclick="execute2()">RUN</button>
+      </div>
+      <div class="six columns">
+        <h4>Output</h4>
+        <div id="result">Aqui aparecera la salida del código</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="{% static "web/js/calls.js" %}"></script>
+</html>
