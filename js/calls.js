@@ -1,5 +1,5 @@
 function execute2(){
-  var url = 'http://localhost:5000/';
+  var url = 'http://localhost:5000/execute';
   var data = (document.getElementById("code").value);
   fetch(url, {
     method: 'POST',
@@ -13,8 +13,7 @@ function execute2(){
   .then(
     function (response) {
       return response.text().then(function(text) {
-          console.log(text);
-          document.getElementById("result").innerHTML = text;
+          document.getElementById("result").innerHTML = text.replace(new RegExp('\r?\n','g'), '<br />');
       })
     }
   );
