@@ -1,6 +1,7 @@
 function execute2(){
   var url = 'http://localhost:5000/execute';
-  var data = (document.getElementById("code").value);
+  var editor = ace.edit("editor");
+  var data = editor.getValue()
   fetch(url, {
     method: 'POST',
     body: JSON.stringify(data),
@@ -13,7 +14,6 @@ function execute2(){
   .then(
     function (response) {
       return response.text().then(function(text) {
-          console.log(text);
           document.getElementById("result").innerHTML = text.replace(new RegExp('\r?\n','g'), '<br />');
       })
     }
