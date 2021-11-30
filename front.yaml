@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: python-executor-front-a
-          image: antsz2526/pythonexecutor_front:v2
+          image: antsz2526/pythonexecutor_front:v3
           ports:
             - containerPort: 4000
           imagePullPolicy: Always

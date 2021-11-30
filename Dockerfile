@@ -1,4 +1,4 @@
-FROM antsz2526/pythonexecutor:v2
+FROM antsz2526/pythonexecutor:v3
 
 WORKDIR /app
 
