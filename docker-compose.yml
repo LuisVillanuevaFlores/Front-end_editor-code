@@ -1,6 +1,6 @@
 version: '3.7'
 services:
   python_executor:
-    image: antsz2526/pythonexecutor_front:v1
+    image: pythonexecutor_front_c
     ports:
       - "4000:4000"

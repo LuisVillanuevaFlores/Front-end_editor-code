@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-executor-front
+  name: python-executor-front-a
   labels:
-    app: python-executor-front
+    app: python-executor-front-a
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: python-executor-front
+      app: python-executor-front-a
   template:
     metadata:
       labels:
-        app: python-executor-front
+        app: python-executor-front-a
     spec:
       containers:
-        - name: python-executor-front
-          image: antsz2526/pythonexecutor_front:v4
+        - name: python-executor-front-a
+          image: antsz2526/pythonexecutor_front:v2
           ports:
             - containerPort: 4000
+          imagePullPolicy: Always

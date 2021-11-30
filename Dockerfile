@@ -5,7 +5,8 @@ WORKDIR /app
 COPY app.py /app
 COPY demo.html /app
 COPY ./static/ /app/static/
-COPY ./templates/ /app/templates/
+COPY ./templates/index.html /app/templates/
+COPY ./static/js/calls.js /app/static/js/
 
 RUN ls -laR /app/*
 
